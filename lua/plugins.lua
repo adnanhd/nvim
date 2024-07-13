@@ -13,16 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- File Tree 
-    -- {
-    --     "nvim-neo-tree/neo-tree.nvim",
-    --     branch = "v3.x",
-    --     dependencies = {
-    --         "nvim-lua/plenary.nvim",
-    --         "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-    --         "MunifTanjim/nui.nvim",
-    --         -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-    --     }
-    -- },
     {
         "nvim-tree/nvim-tree.lua",
         dependencies = {
@@ -64,25 +54,6 @@ require("lazy").setup({
     {
         "stevearc/conform.nvim",
         event = { "BufReadPre", "BufNewFile" },
-        -- config = function()
-        --     local conform = require("conform")
-        --     conform.setup({
-        --         formatters_by_Ft = {
-        --             python = { "black" },
-        --         }
-        --     })
-
-        --     local format_fn = function()
-        --         conform.format({
-        --             lsp_fallback = true,
-        --             async = false,
-        --             timeout_ms = 1000,
-        --         })
-        --     end 
-
-        --     vim.keymap.set({ "n", "v" }, "<leader>l", format_fn, 
-        --             { desc = "Format file or range (in visual mode)" })
-        -- end
     },
     -- CoPilot configuration
     {
@@ -155,5 +126,8 @@ require("lazy").setup({
             })
         end
 
+    },
+    {
+        "fecet/fortune.nvim",
     }
 })
