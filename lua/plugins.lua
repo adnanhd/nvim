@@ -55,6 +55,12 @@ require("lazy").setup({
         "stevearc/conform.nvim",
         event = { "BufReadPre", "BufNewFile" },
     },
+    -- Fuzzy File Finder
+    {
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.8",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
     -- CoPilot configuration
     {
         "zbirenbaum/copilot.lua",
@@ -129,5 +135,10 @@ require("lazy").setup({
     },
     {
         "fecet/fortune.nvim",
+    },
+    {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        dependencies = { {'nvim-tree/nvim-web-devicons'}},
     }
 })
