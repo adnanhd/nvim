@@ -26,7 +26,7 @@ cmp.setup({
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
         -- or reject the selection
         ["<C-e>"] = cmp.mapping.abort(), -- close completing window
-        ["<C-c"] = cmp.mapping.complete(), -- show completion suggestion
+        ["<C-n"] = cmp.mapping.complete(), -- show completion suggestion
 
         -- A super tab
         -- sourc: https://github.com/hrsh7th/nvim-cmp/wiki/Example-mappings#luasnip

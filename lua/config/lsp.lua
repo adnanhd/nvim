@@ -10,7 +10,27 @@ require('mason').setup({
 
 require('mason-lspconfig').setup({
     -- A list of servers to automatically install if they're not already installed
-    ensure_installed = { 'pylsp', 'lua_ls', 'rust_analyzer' },
+    ensure_installed = { 
+        --- LSP  
+        "pylsp", -- Python language server
+        "lua_ls", -- Lua language server
+        "clangd", -- C/C++ language server
+        "cmake", -- CMake language server
+        "dockerls", -- Dockerfile language server
+        "rust_analyzer", -- rust language server
+        -- --  DAP  Tools
+        -- "codelldb", -- LLDB debugger for C/C++ Rust languages
+        -- "debugpy", -- Python debugger
+        -- --  Linters and Formatters
+         "ast_grep", -- AST-based search, linting, and refactoring tool for  c/c++/python
+        -- "pylint", -- Python linting
+        -- "flake8", -- Python linting
+        -- "mypy",  -- Python type checker
+        -- "pyright", -- Python static type checker
+        -- 
+        -- "black", -- python  code formatter
+        -- "clang-format", -- formatter for C/C++ code
+    },
 })
 
 -- Set different settings for different languages' LSP
