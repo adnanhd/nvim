@@ -119,22 +119,34 @@ lazy.setup({
     },
 
     -- Org-Mode and Org-Roam
+    {
+      "nvim-neorg/neorg",
+      lazy = false, -- Disable lazy loading as some `lazy.nvim` distributions set `lazy = true` by default
+      version = "*", -- Pin Neorg to the latest stable release
+      config = true,
+    },
 
-    {
-      'nvim-orgmode/orgmode',
-      event = 'VeryLazy',
-      ft = { 'org' },
-    },
-    {
-      "chipsenkbeil/org-roam.nvim",
-      tag = "0.1.1",
-      dependencies = {
-        {
-          "nvim-orgmode/orgmode",
-          tag = "0.3.7",
-        },
-      },
-    },
+    -- {
+    --   'nvim-orgmode/orgmode',
+    --   event = 'VeryLazy',
+    --   -- ft = { 'org' },
+    --   config = function()
+    --     require('orgmode').setup({
+    --       org_agenda_files = '~/org/inbox/*.org',
+    --       org_default_notes_file = '~/org/mode.d/notes/notes.org',
+    --     })
+    --   end,
+    -- },
+    -- {
+    --   "chipsenkbeil/org-roam.nvim",
+    --   tag = "0.1.1",
+    --   dependencies = {
+    --     {
+    --       "nvim-orgmode/orgmode",
+    --       -- tag = "0.3.7",
+    --     },
+    --   },
+    -- },
 
     -- File explorer
     {
