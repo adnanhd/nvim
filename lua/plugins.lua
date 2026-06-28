@@ -98,5 +98,19 @@ lazy.setup({
       'nvim-telescope/telescope.nvim',
       dependencies = { 'nvim-lua/plenary.nvim' },
     },
+
+    -- Claude Code (in-editor terminal + send/diff; needs the `claude` CLI)
+    {
+      'coder/claudecode.nvim',
+      config = true,
+      keys = {
+        { '<leader>ac', '<cmd>ClaudeCode<cr>', desc = 'Claude Code toggle' },
+        { '<leader>af', '<cmd>ClaudeCodeFocus<cr>', desc = 'Claude Code focus' },
+        { '<leader>ab', '<cmd>ClaudeCodeAdd %<cr>', desc = 'Add buffer to Claude' },
+        { '<leader>as', '<cmd>ClaudeCodeSend<cr>', mode = 'v', desc = 'Send selection to Claude' },
+        { '<leader>aa', '<cmd>ClaudeCodeDiffAccept<cr>', desc = 'Accept Claude diff' },
+        { '<leader>ad', '<cmd>ClaudeCodeDiffDeny<cr>', desc = 'Deny Claude diff' },
+      },
+    },
   },
 })
