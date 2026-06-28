@@ -18,10 +18,3 @@ conform.setup({
   },
 })
 
--- Format on save
-vim.api.nvim_create_autocmd("BufWritePre", {
-  callback = function()
-    require("conform").format()
-  end,
-})
-

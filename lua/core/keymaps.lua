@@ -62,25 +62,11 @@ map('t', '<Esc>', '<C-\\><C-n>')                    -- exit
 
 -- NvimTree
 map('n', '<C-n>', ':NvimTreeToggle<CR>')            -- open/close
-map('n', '<leader>f', ':NvimTreeRefresh<CR>')       -- refresh
-map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
+map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- reveal current file
 
--- Tagbar
-map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
-
--- DAP
-map("n", "<Leader>da", "<CMD>lua require('dap').continue()<CR>", opts)
-map("n", "<Leader>db", "<CMD>lua require('dap').toggle_breakpoint()<CR>", opts)
-map("n", "<Leader>dd", "<CMD>lua require('dap').continue()<CR>", opts)
-map("n", "<Leader>dh", "<CMD>lua require('dapui').eval()<CR>", opts)
-map("n", "<Leader>di", "<CMD>lua require('dap').step_into()<CR>", opts)
-map("n", "<Leader>do", "<CMD>lua require('dap').step_out()<CR>", opts)
-map("n", "<Leader>dO", "<CMD>lua require('dap').step_over()<CR>", opts)
-map("n", "<Leader>dt", "<CMD>lua require('dap').terminate()<CR>", opts)
-map("n", "<Leader>du", "<CMD>lua require('dapui').open()<CR>", opts)
-map("n", "<Leader>dc", "<CMD>lua require('dapui').close()<CR>", opts)
-
-map("n", "<Leader>dw", "<CMD>lua require('dapui').float_element('watches', { enter = true })<CR>", opts)
-map("n", "<Leader>ds", "<CMD>lua require('dapui').float_element('scopes', { enter = true })<CR>", opts)
-map("n", "<Leader>dr", "<CMD>lua require('dapui').float_element('repl', { enter = true })<CR>", opts)
+-- Telescope
+map('n', '<leader>ff', ':Telescope find_files<CR>')
+map('n', '<leader>fg', ':Telescope live_grep<CR>')
+map('n', '<leader>fb', ':Telescope buffers<CR>')
+map('n', '<leader>fh', ':Telescope help_tags<CR>')
 
