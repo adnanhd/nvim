@@ -103,6 +103,10 @@ lazy.setup({
     {
       'coder/claudecode.nvim',
       config = true,
+      cmd = {
+        'ClaudeCode', 'ClaudeCodeFocus', 'ClaudeCodeSend', 'ClaudeCodeAdd',
+        'ClaudeCodeDiffAccept', 'ClaudeCodeDiffDeny',
+      },
       keys = {
         { '<leader>ac', '<cmd>ClaudeCode<cr>', desc = 'Claude Code toggle' },
         { '<leader>af', '<cmd>ClaudeCodeFocus<cr>', desc = 'Claude Code focus' },
