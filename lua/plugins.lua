@@ -58,6 +58,15 @@ lazy.setup({
     -- Treesitter
     { 'nvim-treesitter/nvim-treesitter', build = ':TSUpdate' },
 
+    -- Org-mode reading: syntax highlighting + folding (no agenda/capture)
+    {
+      'nvim-orgmode/orgmode',
+      ft = { 'org' },
+      config = function()
+        require('orgmode').setup({})
+      end,
+    },
+
     -- Indent guides
     { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
 
